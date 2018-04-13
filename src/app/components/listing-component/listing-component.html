@@ -1,0 +1,9 @@
+<h2>
+  <h3>Listing:</h3>
+  <ul class="listing">
+    <li *ngFor="let item of list[0].value">
+      <span><p>{{item.id}} is {{item.name}}</p></span>
+    </li>
+  </ul>
+</h2>
+<router-outlet></router-outlet>
