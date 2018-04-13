@@ -1,9 +1,12 @@
 <h2>
   <h3>Listing:</h3>
-  <ul class="listing">
-    <li *ngFor="let item of list[0].value">
-      <span><p>{{item.id}} is {{item.name}}</p></span>
-    </li>
-  </ul>
+  <div class="ui-menu">
+    <ul class="list-of-products">
+      <li *ngFor="let item of list[0].value">
+        <span class="badge">{{item.id}}</span> 
+        <p class="item-name">{{item.name}}</p>
+      </li>
+    </ul>
+  </div>
 </h2>
 <router-outlet></router-outlet>
