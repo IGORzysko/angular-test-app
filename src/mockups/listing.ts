@@ -1,3 +1,4 @@
+
 import { Product } from '../app/domain/product';
 
 export const LIST: Product[] = 
@@ -7,4 +8,5 @@ export const LIST: Product[] =
     {id: 3, name: 'realy'},
     {id: 4, name: 'nice'},
     {id: 5, name: 'today.'}
+import { Listing } from '../app/domain/listing';
 ];
