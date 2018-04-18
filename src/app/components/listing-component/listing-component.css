@@ -1,69 +1,77 @@
+.ui-menu{
+  position: absolute;
+  max-width: 700px;
+}
+
 .ui-menu ul {
     list-style: none none inside; 
     padding-left:0px;
     padding:0px;
-    margin-left:-30px;
-    margin-right:0px;
+    margin-left:0px;
+    margin-right:35px;
+    max-width: 1300px;
 }
 
-.ui-menu{
-    position: absolute;
-    max-width: 100%;
-}
-
-.selected {
+/*.selected {
     background-color: #CFD8DC !important;
     color: white;
-  }
+  }*/
 
-  .list-of-products {
-    text-align: center;
-    position: relative;
-    margin: auto;
-    list-style-type: none;
-  }
-
-  .list-of-products li { 
-    display:inline-block;
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    background-color: #EEE;
-    margin: .5em;
-    padding: .3em 0;
-    border-radius: 4px;
-    width:350px;
-    height: 350px;
-  }
-  .list-of-products li.selected:hover {
-    background-color: #BBD8DC !important;
-    color: white;
-  }
-  .list-of-products li:hover {
-    color: #607D8B;
-    background-color: #DDD;
-  }
-
-  .list-of-products .badge {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.7em 0.5em 0 0.7em;
-    background-color: #607D8B;
-    line-height: 0;
-    position: relative;
-    top: -16px;
-    height: 355px;
-    margin-right: .8em;
-    margin-bottom: 10px;
-    margin-left: -315px;
-    border-radius: 4px 0 0 4px;
+  /*
+.list-of-products {
+text-align: center;
+position: relative;
+margin: auto;
+list-style-type: none;
+margin-top: 25px;
+max-width:700px;
+height: 125px;
 }
+*/
+
+.list-of-products li { 
+display:inline-block;
+position: relative;
+left: 0;
+margin-top:15px;
+margin-bottom:15px;
+}
+
+.list-of-products li.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+
+.list-of-products li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+}
+
+*/
+/*
+.list-of-products .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.7em 0.5em 0 0.7em;
+  background-color: #607D8B;
+  line-height: 0;
+  position: relative;
+  top: -10px;
+  height: 125px;
+  margin-right: .8em;
+  margin-bottom: 0px;
+  margin-left: -670px;
+  border-radius: 4px 0 0 4px;
+}*/
 
 .item-name
 {
-    font-size: 40px;
+    font-size: 30px;
     position: relative;
     text-align: center;
-    margin-top: -220px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }

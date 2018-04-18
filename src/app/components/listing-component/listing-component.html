@@ -1,12 +1,19 @@
 <h2>
-  <h3>Listing:</h3>
+  <h3>To do list:</h3>
+  <br>
   <div class="ui-menu">
     <ul class="list-of-products">
       <li *ngFor="let item of list[0].value">
-        <span class="badge">{{item.id}}</span> 
-        <p class="item-name">{{item.name}}</p>
+        <div id = "{{item.id}}" class="input-group">
+            <input type="text" class="form-control" (ngModel)="item" placeholder="Describe your task ...">
+            <span class="input-group-btn">
+                <button class="btn btn-success" type="button"  (click) = "updateElement(item.id)">Add</button>
+              <button class="btn btn-danger" type="button" (click) = "removeElement(item.id)">Delete</button>
+            </span>
+          </div>
       </li>
     </ul>
+    <button class="btn btn-primary" type="button" (click) = "addElement()">Add task</button>
   </div>
 </h2>
 <router-outlet></router-outlet>
