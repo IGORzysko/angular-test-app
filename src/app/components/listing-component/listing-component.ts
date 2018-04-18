@@ -28,8 +28,8 @@ export class ListingComponent implements OnInit {
     this.listingService.removeItemToList(itemId);
   }
 
-  updateElement(itemId):void {
-    this.listingService.updateItemFromList(itemId);
+  updateElement(itemId, itemName):void {
+    this.listingService.updateItemFromList(itemId, itemName);
   }
 
   ngOnInit() {

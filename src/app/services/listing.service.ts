@@ -16,7 +16,7 @@ export class ListingService {
   };
 
   addItemToList():void {
-    LIST.push(new Product(LIST.length + 1));
+    LIST.push(new Product(LIST.length + 1, ""));
   }
 
   removeItemToList(itemId):void {
@@ -28,14 +28,17 @@ export class ListingService {
     this.removeDomElement((elementIndex + 1));
   }
 
-  updateItemFromList(item):void {
-    var element = LIST.find(x => x.id == item.id);  
+  updateItemFromList(itemId, itemName):void {
+    var element = LIST.find(x => x.id == itemId);  
     var elementIndex = LIST.indexOf(element);
 
-    LIST[elementIndex] == item;
+    LIST[elementIndex].id == itemId;
+    LIST[elementIndex].name == itemName;
   }
 
   removeDomElement(itemId):void {
-    document.getElementById(itemId.toString()).remove(); 
+    var p = document.getElementById(itemId.toString());
+    
+    p.remove();
   }
 }

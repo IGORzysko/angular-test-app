@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ListingService } from './services/listing.service';
 
@@ -15,8 +16,10 @@ import { AppRoutingModule } from './app-routing.module';
     //,Listing
   ],
   imports: [
+    FormsModule,   
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule                        
   ],
   providers: [ListingService],
   bootstrap: [AppComponent]

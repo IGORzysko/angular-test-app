@@ -9,8 +9,9 @@ export class Product {
         this.name = name;
     }*/
 
-    constructor (id)
+    constructor (id, name)
     {
         this.id = id;
+        this.name = name;
     }
 }
