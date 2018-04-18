@@ -23,9 +23,9 @@ export class ListingService {
     var element = LIST.find(x => x.id == itemId); 
     var elementIndex = LIST.indexOf(element);
 
-    delete LIST[elementIndex];
+    this.removeItemDomElement((elementIndex + 1));
 
-    this.removeDomElement((elementIndex + 1));
+    //delete LIST[elementIndex];
   }
 
   updateItemFromList(itemId, itemName):void {
@@ -36,9 +36,9 @@ export class ListingService {
     LIST[elementIndex].name == itemName;
   }
 
-  removeDomElement(itemId):void {
+  removeItemDomElement(itemId):void {
     var p = document.getElementById(itemId.toString());
-    
-    p.remove();
+
+    p.parentNode.removeChild(p);
   }
 }
