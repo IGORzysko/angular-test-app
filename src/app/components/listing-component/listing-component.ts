@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-//import {LIST} from 'C:/angular-app/src/mockups/listing';
 import { ListingService } from 'C:/Projects/angular-test-app/src/app/services/listing.service';
 import { LIST } from '../../../mockups/listing';
 
@@ -10,7 +9,7 @@ import { LIST } from '../../../mockups/listing';
 })
 export class ListingComponent implements OnInit {
  
-  constructor(private listingService: ListingService)
+  constructor(private listingService: ListingService) 
   {
   }
 
