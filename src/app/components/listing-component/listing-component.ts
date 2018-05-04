@@ -5,12 +5,12 @@ import { LIST } from '../../../mockups/listing';
 @Component({
   selector: 'app-listing-component',
   templateUrl: './listing-component.html',
-  styleUrls: ['./listing-component.css']
+  styleUrls: ['./listing-component.css'],
+  
 })
 export class ListingComponent implements OnInit {
  
-  constructor(private listingService: ListingService) 
-  {
+  constructor(private listingService: ListingService) {
   }
 
   list;

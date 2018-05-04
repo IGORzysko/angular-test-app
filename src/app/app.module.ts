@@ -7,19 +7,19 @@ import { ListingService } from './services/listing.service';
 import { AppComponent } from './app.component';
 import { ListingComponent } from './components/listing-component/listing-component';
 import { AppRoutingModule } from './app-routing.module';
-//import { Listing } from './domain/listing';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent
-    ,ListingComponent
-    //,Listing
+    ,ListingComponent   
   ],
   imports: [
     FormsModule,   
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule                        
+    ReactiveFormsModule,
+    HttpClientModule     
   ],
   providers: [ListingService],
   bootstrap: [AppComponent]
