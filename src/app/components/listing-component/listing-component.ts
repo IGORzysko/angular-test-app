@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ListingService } from 'C:/Projects/angular-test-app/src/app/services/listing.service';
 import { LIST } from '../../../mockups/listing';
+import {  } from 'C:/Projects/angular-test-app/src/app/bower_components/angular-strap/';
 
 @Component({
   selector: 'app-listing-component',
