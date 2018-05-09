@@ -1,0 +1,9 @@
+<h3>Add description of your task</h3>
+  <div class="ui-menu">
+    <div id = "{{item?.id}}" class="input-group">
+        <input type="text" class="form-control" [ngModel]="item?.name" (ngModelChange)="item.name = $event" placeholder="Describe your task ...">
+        <span class="input-group-btn">
+            <button class="btn btn-success" type="button"  (click) = "updateElement(item?.id, item?.name)"><span class="glyphicon glyphicon-ok"></span></button>
+        </span>
+        </div>
+  </div>
