@@ -6,6 +6,7 @@ import { ListingService } from './services/listing.service';
 
 import { AppComponent } from './app.component';
 import { ListingComponent } from './components/listing-component/listing-component';
+import { ListingModalComponent } from './components/listing-modal-component/listing-modal-component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -13,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent
     ,ListingComponent,
+    ListingModalComponent
   ],
   imports: [
     FormsModule,   
