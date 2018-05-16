@@ -13,7 +13,8 @@ export class ListingComponent implements OnInit {
   constructor(private listingService: ListingService) {
   }
 
-  list;
+  item:any;
+  list:Array<any>;
   display:any = 'none';
 
   getList(): void {
@@ -43,7 +44,13 @@ export class ListingComponent implements OnInit {
   onCloseHandled(): void {
   }
 
+  addAndUpdateItemWithinModal(name):void {
+    this.addElement();
+    this.updateElement(this.list[0].value.length, name);
+  }
+
   ngOnInit() {
     this.getList();
+    this.item = {id: "", name:""};
   };
 }

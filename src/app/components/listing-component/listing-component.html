@@ -33,8 +33,10 @@
         </div>
         <div class="modal-body">
             <input type="text" class="form-control" [ngModel]="item?.name" (ngModelChange)="item.name = $event" placeholder="Describe your task ...">
-            <br>
-            <button class="btn btn-success" type="button"  (click) = "updateElement(item?.id, item?.name)"><span class="glyphicon glyphicon-ok"></span></button>
+            <span class="input-group-btn">
+              <button class="btn btn-success" type="button"  (click) = "addAndUpdateItemWithinModal(item?.name)">
+              <span class="glyphicon glyphicon-ok"></span></button>
+            </span>
           </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default btn-small" (click)="closeModalDialog()">Close</button>
