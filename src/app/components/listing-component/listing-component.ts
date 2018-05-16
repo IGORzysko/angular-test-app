@@ -14,6 +14,7 @@ export class ListingComponent implements OnInit {
   }
 
   list;
+  display:any = 'none';
 
   getList(): void {
     this.list = Array.of(this.listingService.getList());
@@ -29,6 +30,17 @@ export class ListingComponent implements OnInit {
 
   updateElement(itemId, itemName):void {
     this.listingService.updateItemFromList(itemId, itemName);
+  }
+
+  openModalDialog(): void {
+    this.display = 'block';
+  }
+
+  closeModalDialog(): void {
+    this.display = 'none';
+  }
+
+  onCloseHandled(): void {
   }
 
   ngOnInit() {

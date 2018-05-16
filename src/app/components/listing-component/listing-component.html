@@ -1,3 +1,5 @@
+<!--proper view-->
+
 <h2>
 <h3>TO DO list</h3>
   <div class="ui-menu">
@@ -12,7 +14,33 @@
         </div>
       </li>
     </ul>
-    <button class="btn btn-primary" type="button" (click) = "addElement()">Add task</button>
+    <button type="button" class="btn btn-info btn-small" (click)="openModalDialog()">Add Element</button>
+    <!--<a routerLink = "/listing-modal" routerLinkActive="active">Add task</a>-->
   </div>
 </h2>
-<router-outlet></router-outlet>
+
+<!--display-none modal window implementation-->
+
+<div class="backdrop" [ngStyle]="{'display':display}"></div>
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            Adding new task.
+            <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span aria-hidden="true"></span></button>
+          <ng-content select=".app-modal-header"></ng-content>
+        </div>
+        <div class="modal-body">
+            <input type="text" class="form-control" [ngModel]="item?.name" (ngModelChange)="item.name = $event" placeholder="Describe your task ...">
+            <br>
+            <button class="btn btn-success" type="button"  (click) = "updateElement(item?.id, item?.name)"><span class="glyphicon glyphicon-ok"></span></button>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-small" (click)="closeModalDialog()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
