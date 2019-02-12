@@ -17,13 +17,12 @@ export class ListingService {
 
   }
 
-  //retrieving data from local const list
   getList():Observable<Product[]> {
     return of(LIST);
   };
 
   addItemToList():void {
-    LIST.push(new Product(LIST.length + 1, ""));
+    LIST.push(new Product(LIST.length, ""));
   }
 
   removeItemToList(itemId):void {
@@ -31,7 +30,7 @@ export class ListingService {
     var elementIndex = LIST.indexOf(element);
 
     this.removeDomItemElement((elementIndex + 1)).then(function (index) {
-      //delete LIST[index];
+     LIST.splice(elementIndex, 1);
     });
   }
 
