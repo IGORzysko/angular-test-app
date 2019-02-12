@@ -14,11 +14,10 @@ import {HttpClient} from '@angular/common/http';
 export class ListingService {
 
   constructor(private http: HttpClient) {
+
   }
 
-  //
   //retrieving data from database
-  //
   getTaskFromDatabase(): Observable<any> {
     return this.http.get('/api/todo/listing/');
   }
@@ -35,9 +34,7 @@ export class ListingService {
     this.http.post('/api/todo/delete', item);
   }
 
-  //
   //retrieving data from local const list
-  //
   getList():Observable<Product[]> {
     return of(LIST);
   };
@@ -63,9 +60,7 @@ export class ListingService {
     LIST[elementIndex].name == itemName;
   }
 
-  //
   // helper methods
-  //
   removeDomItemElement(itemId):any {
     var p = document.getElementById(itemId.toString());
     p.parentNode.removeChild(p);

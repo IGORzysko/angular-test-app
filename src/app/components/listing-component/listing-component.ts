@@ -1,8 +1,12 @@
+
+//c# using equivalents
 import { Component, OnInit } from '@angular/core';
 import { ListingService } from 'C:/Projects/angular-test-app/src/app/services/listing.service';
 import { LIST } from '../../../mockups/listing';
 import {  } from 'C:/Projects/angular-test-app/src/app/bower_components/angular-strap/';
 
+//declaration of component's metadata
+//equivalent for routes.js file in AngularJS
 @Component({
   selector: 'app-listing-component',
   templateUrl: './listing-component.html',
@@ -12,9 +16,12 @@ import {  } from 'C:/Projects/angular-test-app/src/app/bower_components/angular-
 export class ListingComponent implements OnInit {
  
   constructor(private listingService: ListingService) {
+    
   }
 
   list;
+
+  //main logic
 
   getList(): void {
     this.list = Array.of(this.listingService.getList());

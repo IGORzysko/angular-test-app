@@ -10,9 +10,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
+
   declarations: [
     AppComponent
     ,ListingComponent     ],
+
   imports: [
     FormsModule,   
     BrowserModule,
@@ -20,7 +22,11 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule     
   ],
+
   providers: [ListingService],
+
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+ }

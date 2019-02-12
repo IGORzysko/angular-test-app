@@ -1,10 +1,13 @@
+
+//c# using equivalents
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ListingComponent } from './listing-component';
 
+//quite not important code
 describe('ListingComponentComponent', () => {
   let component: ListingComponent;
   let fixture: ComponentFixture<ListingComponent>;
-
+ 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ListingComponent ]
