@@ -17,23 +17,6 @@ export class ListingService {
 
   }
 
-  //retrieving data from database
-  getTaskFromDatabase(): Observable<any> {
-    return this.http.get('/api/todo/listing/');
-  }
-
-  addItemToDatabaseList(item: any):void {
-    this.http.post('/api/todo/add', item);
-  }
-
-  updateItemFromDatabaseList(item: any):void {
-    this.http.put('/api/todo/update', item);
-  }
-
-  deleteItemFromDatabaseList(item: any):void {
-    this.http.post('/api/todo/delete', item);
-  }
-
   //retrieving data from local const list
   getList():Observable<Product[]> {
     return of(LIST);
