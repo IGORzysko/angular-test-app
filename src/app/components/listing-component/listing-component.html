@@ -3,7 +3,7 @@
    <div class="ui-menu">
      <ul class="list-of-products">
        <li *ngFor="let item of list[0].value">
-         <div id = "{{item?.id}}" class="input-group">
+         <div id = "list-of-products_{{item?.id}}" class="input-group">
              <input type="text" class="form-control" [ngModel]="item?.name" (ngModelChange)="item.name = $event" placeholder="Describe your task ...">
              <span class="input-group-btn">
                  <button class="btn btn-success" type="button"  (click) = "updateElement(item?.id, item?.name)">
@@ -18,4 +18,6 @@
     <button class="btn btn-primary" type="button" (click) = "addElement()">Add task</button>
    </div>
  </h2>
- <router-outlet></router-outlet> 
+ <router-outlet>
+
+ </router-outlet> 

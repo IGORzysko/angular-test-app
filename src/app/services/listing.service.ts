@@ -22,14 +22,16 @@ export class ListingService {
   };
 
   addItemToList():void {
-    LIST.push(new Product(LIST.length, ""));
+    LIST.push(new Product(LIST.length + 1, ""));
   }
 
   removeItemToList(itemId):void {
     var element = LIST.find(x => x.id == itemId); 
+    var elementId = element.id;
+    
     var elementIndex = LIST.indexOf(element);
 
-    this.removeDomItemElement((elementIndex + 1)).then(function (index) {
+    this.removeDomItemElement(elementId).then(function (index) {
      LIST.splice(elementIndex, 1);
     });
   }
@@ -44,7 +46,9 @@ export class ListingService {
 
   // helper methods
   removeDomItemElement(itemId):any {
-    var p = document.getElementById(itemId.toString());
+
+    var listElementId = "list-of-products_" + itemId.toString();
+    var p = document.getElementById(listElementId);
     p.parentNode.removeChild(p);
 
     let deferr: Deferred<number> = new Deferred<number>();
