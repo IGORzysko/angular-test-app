@@ -8,13 +8,31 @@ import {LIST} from 'C:/Projects/angular-test-app/src/mockups/listing';
 
 import { Promise } from 'q';
 import {Deferred} from "ts-deferred";
+
 import {HttpClient} from '@angular/common/http';
+import { catchError, map, tap } from 'rxjs/operators';
+import {Http,Response} from '@angular/http';
+import 'rxjs/add/operator/map'
 
 @Injectable()
 export class ListingService {
 
   constructor(private http: HttpClient) {
 
+  }
+
+  baseUrl = 'http://localhost:53550';
+
+  getTasks():any{
+    let tasksResponse: any; 
+
+    this.http.get(this.baseUrl + '/api/Task/Get')
+      .map((res:Response) => (
+        res.json()
+      ))
+   .subscribe(data => tasksResponse = data)
+
+   return tasksResponse;
   }
 
   getList():Observable<Product[]> {

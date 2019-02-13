@@ -21,7 +21,9 @@ export class ListingComponent implements OnInit {
 
   list;
 
-  //main logic
+  getTasks(): void{
+    this.listingService.getTasks();
+  }
 
   getList(): void {
     this.list = Array.of(this.listingService.getList());
@@ -41,5 +43,6 @@ export class ListingComponent implements OnInit {
 
   ngOnInit() {
     this.getList();
+    this.getTasks();
   };
 }
